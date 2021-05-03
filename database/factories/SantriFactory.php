@@ -1,0 +1,45 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\Santri;
+use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class SantriFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Santri::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        $jk=['laki-laki','perempuan'];
+        $pondok = ['pusat','prompong','purwanegara'];
+        // User
+        return [
+            'tempat_lahir' => $this->faker->city(),
+            'tanggal_lahir' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
+            'tgl_masuk' => now(),
+            'alamat' => $this->faker->address(),
+            'nama_ayah' => $this->faker->name,
+            'nama_ibu' => $this->faker->name,
+            'jenis_kelamin'=> $jk[rand(0,1)],
+            'nik' => $this->faker->postcode,
+            'telp' => $this->faker->phoneNumber,
+            'pondok' => $pondok[rand(0,2)],
+            'tahun_keluar' => $this->faker->year($max = 'now'),
+            'status' => rand(0,1),
+            'id_angkatan' => rand(1,40),
+            'id_user' => User::all()->random()->id,
+        ];
+    }
+}
