@@ -13,8 +13,8 @@
   <meta content="Pondok Pesantren Al Qur'an Al Amin Pabuwaran" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{asset('front/img/ppq.png')}}" rel="icon">
-  <link href="{{asset('front/img/ppq.png')}}" rel="apple-touch-icon">
+  <link href="{{asset('front/img/favicon.ico')}}" rel="icon">
+  <link href="{{asset('front/img/favicon.ico')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">

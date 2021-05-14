@@ -8,3 +8,4 @@
   <script src="{{asset('admin/assets/vendor/chart.js/dist/Chart.extension.js')}}"></script>
   <!-- Argon JS -->
   <script src="{{asset('admin/assets/js/argon.js?v=1.2.0')}}"></script>
+  
