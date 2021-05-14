@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Angkatan;
 use App\Models\Santri;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -30,15 +31,20 @@ class SantriFactory extends Factory
             'tanggal_lahir' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
             'tgl_masuk' => now(),
             'alamat' => $this->faker->address(),
-            'nama_ayah' => $this->faker->name,
-            'nama_ibu' => $this->faker->name,
+            'sekolah'=>$this->faker->address(),
+            'anak_ke' => rand(1,3),
+            'riwayat_penyakit'=>null,
+            'ukuran_kaos'=>'xl',
+            // ''
+            // 'nama_ayah' => $this->faker->name,
+            // 'nama_ibu' => $this->faker->name,
             'jenis_kelamin'=> $jk[rand(0,1)],
             'nik' => $this->faker->postcode,
             'telp' => $this->faker->phoneNumber,
             'pondok' => $pondok[rand(0,2)],
-            'tahun_keluar' => $this->faker->year($max = 'now'),
+            'tahun_keluar' => null,
             'status' => rand(0,1),
-            'id_angkatan' => rand(1,40),
+            'id_angkatan' => Angkatan::all()->random()->id,
             'id_user' => User::all()->random()->id,
         ];
     }

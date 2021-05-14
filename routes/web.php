@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PendaftaranController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [FrontController::class, 'index'])->name('root');
-
+Route::get('daftar-online', [PendaftaranController::class, 'index'])->name('daftar-online');
 
 Auth::routes();
 

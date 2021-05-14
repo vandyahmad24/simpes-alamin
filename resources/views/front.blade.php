@@ -76,7 +76,6 @@
                     <a href="#">
                       <img src="{{asset('front/img/ayo-mondok.png')}}" alt="">
                     </a>
-                    <button class="btn btn-primary btn-lg mt-5">Pendaftaran</button>
                   </div>
                 </div>
               </div>
@@ -98,8 +97,13 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="well-middle">
                 <div class="single-well">
-                  <img src="{{asset('front/img/browsur/2021.jpg')}}" />
-                  <button class="btn btn-success btn-lg mt-5">Download Brosur</button>
+                  <img src="{{asset('front/img/browsur')}}/{{$brosur->isi}}" loading="lazy" />
+                    <div class="d-flex flex-row justify-content-center">
+                    <form method="get" action="{{asset('front/img/browsur')}}/{{$brosur->isi}}">
+                      <button class="btn btn-success btn-lg mt-5" type="submit">Download Brosur</button>
+                    </form>
+                    <a href="{{route('daftar-online')}}" class="btn btn-primary btn-lg mt-5 ml-5">Daftar Online</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -228,7 +232,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-                  <img src="{{asset('front/img/team/tpq.png')}}" alt="">
+                  <img src="{{asset('front/img/team/tpq.png')}}" alt="tpq al amin" loading="lazy">
                 </a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -261,7 +265,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-                  <img src="{{asset('front/img/team/kominfo.png')}}" alt="">
+                  <img src="{{asset('front/img/team/kominfo.png')}}" alt="kominfo al amin" loading="lazy">
                 </a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -294,7 +298,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-                  <img src="{{asset('front/img/team/fm.png')}}" alt="">
+                  <img src="{{asset('front/img/team/fm.png')}}" alt="Fajrul Mujtaba" loading="lazy">
                 </a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -328,7 +332,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-                  <img src="{{asset('front/img/team/am.png')}}" alt="">
+                  <img src="{{asset('front/img/team/am.png')}}" alt="Asyiqol Musthofa" loading="lazy">
                 </a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -362,7 +366,7 @@
             <div class="single-team-member">
               <div class="team-img">
                 <a href="#">
-                  <img src="{{asset('front/img/team/madin.png')}}" alt="">
+                  <img src="{{asset('front/img/team/madin.png')}}" alt="Madin Al Amin" loading="lazy">
                 </a>
                 <div class="team-social-icon text-center">
                   <ul>
@@ -448,7 +452,7 @@
                 <div class="single-icon">
                   <i class="fa fa-mobile"></i>
                   <p>
-                    Telepon/Wa: +62896-5373-7300<br>
+                    Telepon/Wa: {{$telp}}<br>
                   </p>
                 </div>
               </div>
@@ -459,7 +463,7 @@
                 <div class="single-icon">
                   <i class="fa fa-envelope-o"></i>
                   <p>
-                    Email: alaminpabuaran@gmail.com<br>
+                    Email: {{$email}}<br>
                   </p>
                 </div>
               </div>

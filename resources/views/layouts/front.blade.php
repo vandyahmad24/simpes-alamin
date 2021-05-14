@@ -60,7 +60,7 @@
               <li><a href="#visi">Visi Misi</a></li>
             </ul>
           </li>
-          <li><a href="#pendaftaran">Pendaftaran</a></li>
+          <li><a href="{{route('daftar-online')}}">Pendaftaran</a></li>
           <li><a href="#team">Potret Pesantren</a></li>
           <li><a href="#portfolio">Media Partner</a></li>
           <li><a href="#blog">Blog</a></li>
@@ -100,8 +100,8 @@
 Jalan H.R Boenyamin Gg Gunung Sumbing No 13. A Pabuaran Purwokerto Utara
                     </p>
                     <div class="footer-contacts">
-                      <p><span>Tel:</span> +62896-5373-7300</p>
-                      <p><span>Email:</span> alaminpabuaran@gmail.com</p>
+                      <p><span>Tel:</span> {{$telp}}</p>
+                      <p><span>Email:</span> {{$email}}</p>
                     </div>
                   </div>
                 </div>
