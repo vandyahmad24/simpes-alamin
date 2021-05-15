@@ -16,7 +16,7 @@ class AddTablePendidikan extends Migration
         Schema::create('pendidikan', function (Blueprint $table) {
             $table->id();
             $table->string('tingkat_pendidikan');
-            $table->string('nama_lembaga');
+            $table->string('nama_lembaga')->nullable();
             $table->string('alamat')->nullable();
             $table->integer('id_user');
             $table->timestamps();

@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
             SuperSeeder::class,
             ConfigSeeder::class,
         ]);
-        \App\Models\User::factory(10)->create();
-        \App\Models\Santri::factory(10)->create();
+        // \App\Models\User::factory(10)->create();
+        // \App\Models\Santri::factory(10)->create();
         
     }
 }

@@ -64,7 +64,7 @@
           <li><a href="#team">Potret Pesantren</a></li>
           <li><a href="#portfolio">Media Partner</a></li>
           <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Login</a></li>
+          <li><a href="{{route('login')}}">Login</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->

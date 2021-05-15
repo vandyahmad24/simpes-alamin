@@ -112,7 +112,7 @@
               <div class="col-lg-6">
                 <div class="form-group">
                   <label class="form-control-label" for="input-anak">Anak ke- </label>
-                  <input type="text" id="input-anak" class="form-control" placeholder="1/2/3/dst" name="anak_ke">
+                  <input type="number" id="input-anak" class="form-control" placeholder="1/2/3/dst" name="anak_ke">
                 </div>
               </div>
               <div class="col-lg-6">
@@ -170,7 +170,7 @@
               <div class="col-lg-4">
                 <div class="form-group">
                   <label class="form-control-label" for="input-anak">Alamat </label>
-                  <input type="text" id="input-anak" class="form-control" placeholder="Alamat Sekolah" name="alamat">
+                  <input type="text" id="input-anak" class="form-control" placeholder="Alamat Sekolah" name="alamat_pendidikan">
                 </div>
               </div>
             </div>
