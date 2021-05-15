@@ -64,7 +64,33 @@
           <li><a href="#team">Potret Pesantren</a></li>
           <li><a href="#portfolio">Media Partner</a></li>
           <li><a href="#blog">Blog</a></li>
+          @auth
+            @if(Auth::user()->level=='santri')
+            <li class="drop-down"><a href="">Santri</a>
+              <ul>
+                <li><a href="{{route('santri-dashboard')}}">Dashboard</a></li>
+                <li>
+                  <a href="{{ route('logout') }}"
+                  onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                  {{ __('Logout') }}
+                  </a>
+                </li>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  @csrf
+              </form>
+              </ul>
+            </li>
+            @elseif (Auth::user()->level=='admin')
+            <li><a href="{{route('admin-dashboard')}}">Dashboard</a></li>
+            @else
+
+            @endif
+            
+          @else
           <li><a href="{{route('login')}}">Login</a></li>
+          @endauth
+          
 
         </ul>
       </nav><!-- .nav-menu -->

@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PendaftaranController;
+use App\Http\Controllers\Santri\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,4 +24,12 @@ Route::post('daftar-online', [PendaftaranController::class, 'add'])->name('add-d
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [FrontController::class, 'index'])->name('home');
+
+Route::group(['prefix' => 'santri','middleware' => ['role:santri']], function() {
+    Route::get('/dashboard', [DashboardController::class,'index'])->name('santri-dashboard');
+});
+
+Route::group(['prefix' => 'admin','middleware' => ['role:admin']], function() {
+    Route::get('/dashboard', [AdminDashboardController::class,'index'])->name('admin-dashboard');
+});
