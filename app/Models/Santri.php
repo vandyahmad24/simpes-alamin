@@ -9,4 +9,9 @@ class Santri extends Model
 {
     use HasFactory;
     protected $table = 'santri';
+
+    public function user()
+    {
+        return $this->belongsTo(User::class,'id_user')->select(['id','name','email']);
+    }
 }

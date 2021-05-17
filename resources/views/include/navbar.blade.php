@@ -1,66 +1,41 @@
-<nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
-    <div class="scrollbar-inner">
-      <!-- Brand -->
-      <div class="sidenav-header  align-items-center">
-        <a class="navbar-brand" href="javascript:void(0)">
-          <img src="{{asset('admin/assets/img/brand/blue.png')}}" class="navbar-brand-img" alt="...">
-        </a>
-      </div>
-      <div class="navbar-inner">
-        <!-- Collapse -->
-        <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-          <!-- Nav items -->
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="dashboard.html">
-                <i class="ni ni-tv-2 text-primary"></i>
-                <span class="nav-link-text">Dashboard</span>
-              </a>
+<nav class="navbar navbar-expand navbar-light navbar-bg">
+    <a class="sidebar-toggle">
+        <i class="hamburger align-self-center"></i>
+    </a>
+
+    <ul class="navbar-nav">
+      
+    </ul>
+
+    <div class="navbar-collapse collapse">
+        <ul class="navbar-nav navbar-align">
+          
+            <li class="nav-item dropdown">
+                <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#"
+                    data-bs-toggle="dropdown">
+                    <i class="align-middle" data-feather="settings"></i>
+                </a>
+
+                <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
+                    data-bs-toggle="dropdown">
+                    <img src="{{asset('foto')}}/{{Auth::user()->santri->foto}}" class="avatar img-fluid rounded-circle me-1"
+                        alt="{{Auth::user()->name}}" /> <span class="text-dark">{{Auth::user()->name}}</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="{{route('santri-dashboard')}}"><i class="align-middle me-1"
+                            data-feather="user"></i> Profil Saya</a>
+                    <div class="dropdown-divider"></div>    
+                     <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="icons.html">
-                <i class="ni ni-planet text-orange"></i>
-                <span class="nav-link-text">Icons</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="map.html">
-                <i class="ni ni-pin-3 text-primary"></i>
-                <span class="nav-link-text">Google</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="profile.html">
-                <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">Profile</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tables.html">
-                <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Tables</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">
-                <i class="ni ni-key-25 text-info"></i>
-                <span class="nav-link-text">Login</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="register.html">
-                <i class="ni ni-circle-08 text-pink"></i>
-                <span class="nav-link-text">Register</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="upgrade.html">
-                <i class="ni ni-send text-dark"></i>
-                <span class="nav-link-text">Upgrade</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+        </ul>
     </div>
-  </nav>
+</nav>

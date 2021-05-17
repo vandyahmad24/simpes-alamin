@@ -40,4 +40,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function santri()
+    {
+        return $this->hasOne(Santri::class,'id_user');
+    }
 }
